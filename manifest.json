@@ -1,0 +1,9 @@
+{
+    "name": "GitHub Contributions",
+    "description": "Shows your GitHub contribution graph on new tab!",
+    "version": "0.0.0.1",
+    "permissions" : ["management"],
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    }
+}
