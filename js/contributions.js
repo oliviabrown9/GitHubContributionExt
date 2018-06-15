@@ -1,18 +1,18 @@
-// (function() {
-//
-//   const Util = {}
-//
-//   /* Handles attempting to render an entry. Displays the entry if possible
-//   or handles the error if necessary. Requires the entryElement element, the
-//   entry to render if exists, and the error when rendering if exists. */
-//   Util.renderWithError = (entryElement, entry, error) => {
-//     if (error) {
-//       const errorDiv = document.querySelector('div.error')
-//       errorDiv.innerHTML = error
-//     } else {
-//       entryElement.removeChild(entryElement.lastChild)
-//       EntryView.render(entryElement, entry)
-//     }
-//   }
-//   window.Util = Util
-// })()
+(function() {
+  restoreUserName()
+  const chart = document.querySelector('img.chart');
+  const title = document.querySelector('h1.title');
+    const userLink = document.querySelector('a.userLink');
+
+  function restoreUserName() {
+    chrome.storage.sync.get({
+      userName: 'oliviabrown9',
+    }, function(items) {
+      title.innerHTML = items.userName + "'s GitHub Contributions"
+      userLink.href = "https:github.com/" + items.userName
+      console.log(userLink.href)
+      chart.src = "http://ghchart.rshah.org/" + items.userName
+      return items.userName
+    });
+  }
+})()

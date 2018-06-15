@@ -3,7 +3,10 @@
   "name": "GitHub Contributions",
   "description": "Shows your GitHub contribution graph on new tab!",
   "version": "0.0.0.1",
-  "options_page": "settings.html",
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": false
+  },
   "author": "Olivia Brown",
   "browser_action": {
     /* "default_icon": "tab-icon.png", */
