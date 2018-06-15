@@ -1,0 +1,10 @@
+#message {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  color: #4ba743;
+  font-size: 50px;
+  animation: msg_anim 3s 1; }
