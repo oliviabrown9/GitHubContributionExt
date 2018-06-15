@@ -8,3 +8,20 @@
   color: #4ba743;
   font-size: 50px;
   animation: msg_anim 3s 1; }
+
+header {
+  font-size: 20px;
+  text-align: center;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img {
+  width:65%;
+  position: fixed;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
