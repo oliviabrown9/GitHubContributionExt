@@ -1,5 +1,5 @@
 # GitHubChromeExt
-A a simple Chrome & Firefox extension to show all your GitHub contributions on a new tab.
+A simple Chrome & Firefox extension to show your GitHub contribution graph on a new tab.
 
 Soon to be live on Chrome/Firefox.
 
