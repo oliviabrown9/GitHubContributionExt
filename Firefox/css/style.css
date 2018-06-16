@@ -13,7 +13,7 @@ header {
   font-size: 1.8em;
   text-align: center;
   position: fixed;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -22,6 +22,7 @@ a:link, a:visited, a:focus, a:active{
   color:black;
   text-decoration: none;
 }
+
 a:hover {
   color:green
 }
@@ -29,20 +30,17 @@ a:hover {
 img {
   width:65%;
   position: fixed;
-  top: 33%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.column {
-  float:left;
-  width:25%;
-  height:20%;
-  top:0%;
+footer {
+  color:green;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 40%;
   text-align: center;
-}
-
-.container:after {
-  display: table;
-  clear: both;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

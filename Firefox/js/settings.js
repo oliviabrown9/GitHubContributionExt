@@ -5,13 +5,13 @@
 
   saveButton.addEventListener('click', event => {
     const userName = userNameInput.value
-    chrome.storage.sync.set({
+    browser.storage.sync.set({
       userName: userName,
     })
   });
 
   function restoreSettings() {
-  chrome.storage.sync.get({
+  browser.storage.sync.get({
     userName: 'oliviabrown9',
   }, function(items) {
     userNameInput.placeholder = items.userName
