@@ -5,12 +5,12 @@
   const countLabel = document.querySelector('h3.count');
 
   function restoreUserName() {
-    browser.storage.sync.get({
+    chrome.storage.sync.get({
       userName: '',
     }, function(items) {
       if (items.userName == "") {
         title.innerHTML = "You need to set a username."
-        window.open(browser.getURL('settings.html'));
+        chrome.runtime.openOptionsPage()
         return;
       }
       const userLink = 'https:github.com/' + items.userName

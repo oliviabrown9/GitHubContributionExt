@@ -9,7 +9,6 @@
   },
   "author": "Olivia Brown",
   "browser_action": {
-    /* "default_icon": "tab-icon.png", */
     "default_title": "Your contributions"
   },
     "chrome_url_overrides" : {
