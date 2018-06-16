@@ -3,7 +3,7 @@ A a simple Chrome & Firefox extension to show all your GitHub contributions on a
 
 Soon to be live on Chrome/Firefox.
 
-![Screenshot](screenshots/one.png?raw=true "Screenshot")
+![Screenshot](Screenshots/one.png?raw=true "Screenshot")
 
 In the meantime, feel free to load into Chrome or Firefox on your own.
 Chrome:
