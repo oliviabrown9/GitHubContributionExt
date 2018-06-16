@@ -10,11 +10,10 @@
   animation: msg_anim 3s 1; }
 
 header {
-  z-index: 1;
-  font-size: 20px;
+  font-size: 1.8em;
   text-align: center;
   position: fixed;
-  top: 15%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -30,7 +29,17 @@ a:hover {
 img {
   width:65%;
   position: fixed;
-  top: 33%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  color:green;
+  font-size: 1.5em;
+  position: fixed;
+  bottom: 40%;
+  text-align: center;
   left: 50%;
   transform: translate(-50%, -50%);
 }

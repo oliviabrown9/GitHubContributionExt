@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "GitHub Contributions",
+  "description": "Shows your GitHub contribution graph on new tab!",
+  "version": "0.0.0.1",
+  "options_ui": {
+    "page": "settings.html",
+    "open_in_tab": false
+  },
+  "author": "Olivia Brown",
+  "browser_action": {
+    /* "default_icon": "tab-icon.png", */
+    "default_title": "Your contributions"
+  },
+    "chrome_url_overrides" : {
+        "newtab": "newtab.html"
+    },
+    "permissions" : ["activeTab", "storage"]
+}
