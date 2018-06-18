@@ -5,7 +5,7 @@
 }
 
 header {
-  font-size: 1.8em;
+  font-size: 1.3em;
   text-align: center;
   position: fixed;
   top: 20%;
@@ -32,9 +32,9 @@ img {
 
 footer {
   color:green;
-  font-size: 1.5em;
+  font-size: 1.3em;
   position: fixed;
-  bottom: 40%;
+  bottom: 30%;
   text-align: center;
   left: 50%;
   transform: translate(-50%, -50%);
