@@ -7,15 +7,21 @@
   function restoreUserName() {
     browser.storage.sync.get({
       userName: '',
+      color: ''
     }, function(items) {
       if (items.userName == "") {
         title.innerHTML = "You need to set a username."
-        window.open(browser.getURL('settings.html'));
+        browser.runtime.openOptionsPage()
         return;
       }
       const userLink = 'https:github.com/' + items.userName
       title.innerHTML = "<a href=" + userLink + ">" + items.userName +"'s GitHub Contributions</a>"
-      chart.src = "http://ghchart.rshah.org/" + items.userName
+      if (items.color) {
+        chart.src = "http://ghchart.rshah.org/" + items.color + "/" + items.userName
+      }
+      else {
+        chart.src = "http://ghchart.rshah.org/" + items.userName
+      }
       fetch('https://urlreq.appspot.com/req?method=GET&url=https://github.com/users/' + items.userName + '/contributions')
       .then(function(response) {
         return response.text();
