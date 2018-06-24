@@ -18,6 +18,7 @@
       title.innerHTML = "<a href=" + userLink + ">" + items.userName +"'s GitHub Contributions</a>"
       if (items.color) {
         chart.src = "http://ghchart.rshah.org/" + items.color + "/" + items.userName
+        countLabel.style.color = "#" + items.color;
       }
       else {
         chart.src = "http://ghchart.rshah.org/" + items.userName
