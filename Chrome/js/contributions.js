@@ -16,13 +16,6 @@
       }
       const userLink = 'https:github.com/' + items.userName
       title.innerHTML = "<a href=" + userLink + ">" + items.userName +"'s GitHub Contributions</a>"
-      if (items.color) {
-        chart.src = "http://ghchart.rshah.org/" + items.color + "/" + items.userName
-        countLabel.style.color = "#" + items.color;
-      }
-      else {
-        chart.src = "http://ghchart.rshah.org/" + items.userName
-      }
       fetch('https://urlreq.appspot.com/req?method=GET&url=https://github.com/users/' + items.userName + '/contributions')
       .then(function(response) {
         return response.text();
@@ -40,6 +33,31 @@
       .catch(function(error) {
         console.log('Request failed', error)
       });
+      if (items.color) {
+        setupWithCustomColor(items.color, items.userName)
+      }
+      else {
+        setupWithDefaultColor(items.userName)
+      }
+      title.addEventListener("mouseout", function() {
+        this.getElementsByTagName("a")[0].style.color = "#000000";
+      });
+    });
+  }
+
+  function setupWithCustomColor(color, userName) {
+    chart.src = "http://ghchart.rshah.org/" + color + "/" + userName
+    countLabel.style.color = "#" + color;
+    title.addEventListener("mouseover", function() {
+      this.getElementsByTagName("a")[0].style.color = "#" + color;
+    });
+
+  }
+
+  function setupWithDefaultColor(userName) {
+    chart.src = "http://ghchart.rshah.org/" + userName
+    title.addEventListener("mouseover", function() {
+      this.getElementsByTagName("a")[0].style.color = "green";
     });
   }
 
